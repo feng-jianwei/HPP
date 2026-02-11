@@ -1,0 +1,25 @@
+{
+    "cmake.debugConfig": {
+        "name": "Debug with GDB (forced)",
+        "type": "cppdbg",
+        "request": "launch",
+        "MIMode": "gdb",
+        "miDebuggerPath": "/usr/bin/gdb",          // 你的 gdb 路径，用 which gdb 确认，通常是这个
+        "setupCommands": [
+            {
+                "description": "Enable pretty printing",
+                "text": "-enable-pretty-printing",
+                "ignoreFailures": true
+            }
+        ]
+        // 可选：其他自定义，比如 args、environment 等
+        // "args": ["--some-arg"],
+        // "environment": [{"name": "VAR", "value": "value"}]
+    },
+    "cmake.configureArgs": [
+        "-DBENCHMARK_ENABLE_GTEST_TESTS=OFF",
+        "-DINSTALL_GTEST=OFF",
+        "-DBUILD_GMOCK=OFF",
+        "-DBENCHMARK_ENABLE_INSTALL=OFF"
+    ],
+}

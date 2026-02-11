@@ -1,0 +1,5 @@
+set(CMAKE_SKIP_BUILD_RPATH FALSE)
+set(CMAKE_BUILD_RPATH_USE_ORIGIN TRUE)
+add_subdirectory(test_false_sharing)
+add_subdirectory(test_sum)
+add_subdirectory(test_lock-free)
