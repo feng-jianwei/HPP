@@ -1,0 +1,59 @@
+---
+# 基于 Google 的代码风格
+BasedOnStyle: Google
+
+# 缩进设置
+IndentWidth: 4                # Google 风格使用 2 个空格进行缩进
+TabWidth: 4                   # 制表符宽度为 2
+UseTab: Never                 # 不使用制表符，使用空格进行缩进
+
+# 换行和列宽设置
+ColumnLimit: 120               # 每行的最大字符数为 80
+BreakBeforeBraces: Custom      
+# 进一步控制类的大括号行为
+BraceWrapping:
+  AfterClass: false         # 类声明后的大括号不换行
+  AfterStruct: false        # 结构体声明后的大括号不换行
+  AfterEnum: false          # 枚举声明后的大括号不换行
+  AfterFunction: true       # 函数声明后的大括号保持 Google 风格（换行）
+  BeforeElse: false          # else 前的大括号保持换行
+  AfterNamespace: false     # 命名空间后不换行
+  SplitEmptyFunction: false # 空函数不换行
+  SplitEmptyRecord: false   # 空类/结构体不换行
+  SplitEmptyNamespace: false # 空命名空间不换行
+
+AllowShortIfStatementsOnASingleLine: true  # 允许单行 if 语句
+AllowShortLoopsOnASingleLine: false         # 不允许单行循环
+AccessModifierOffset: -4    # 设置 public, private 等的缩进量为 -2，相对于类的缩进
+
+# 函数定义和调用
+DerivePointerAlignment: false  # 手动指定指针对齐方式
+PointerAlignment: Left         # 指针符号与类型在同一行
+
+# 空格设置
+SpaceBeforeParens: ControlStatements  # 控制语句的括号前加空格 (if, for, while)
+SpacesInParentheses: false            # 括号内部不加空格
+SpacesInSquareBrackets: false         # 方括号内部不加空格
+SpaceAfterCStyleCast: true            # C 风格强制转换后加空格
+
+# 注释
+CommentPragmas: '^ IWYU pragma:'     # 配置哪些注释保留原始格式
+IndentExternBlock: AfterExternBlock  # `extern` 块内部缩进
+
+# 其他设置
+AllowShortFunctionsOnASingleLine: true  # 允许单行定义函数
+
+
+# 构造函数初始值列表
+ConstructorInitializerAllOnOneLineOrOnePerLine: true  # 构造函数初始化列表：一行写完或每行一个
+
+# Lambda 格式化
+AlignAfterOpenBracket: Align  # 对齐方式（例如参数列表）
+
+# Include 格式化
+IncludeBlocks: Regroup
+IncludeIsMainRegex: '([.]cc|[.]h)$'  # 指定主源文件格式
+
+# 强制将空行保留在一些结构之间
+KeepEmptyLinesAtTheStartOfBlocks: false  # 不保留块起始位置的空行
+---
