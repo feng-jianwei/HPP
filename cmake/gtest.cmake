@@ -7,5 +7,4 @@ FetchContent_Declare(
     GIT_TAG        v1.15.2             # 2025年常用版本，建议固定 tag
     SOURCE_DIR ${PROJECT_SOURCE_DIR}/third_party/googletest
 )
-FetchContent_Populate(googletest)
-add_subdirectory(${PROJECT_SOURCE_DIR}/third_party/googletest)
+FetchContent_MakeAvailable(googletest)

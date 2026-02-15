@@ -8,7 +8,5 @@ FetchContent_Declare(
     SOURCE_DIR ${PROJECT_SOURCE_DIR}/third_party/benchmark
 )
 # 手动下载项目而不添加到构建系统中
-FetchContent_Populate(benchmark)
+FetchContent_MakeAvailable(benchmark)
 set(BENCHMARK_ENABLE_TESTING        OFF CACHE BOOL "" FORCE)
-include_directories(${PROJECT_SOURCE_DIR}/third_party/benchmark/include)
-add_subdirectory(${PROJECT_SOURCE_DIR}/third_party/benchmark)
